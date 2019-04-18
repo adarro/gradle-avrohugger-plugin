@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger.common
+package com.chudsaviet.gradle.avrohugger.common
 
 import groovy.transform.Immutable
 

@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
 }
 
-group = 'com.zlad.gradle'
+group = 'com.chudsaviet.gradle'
 
 version = resolveVersion()
 
@@ -25,8 +25,8 @@ dependencies {
 gradlePlugin {
     plugins {
         avrohuggerPlugin {
-            id = 'com.zlad.gradle.avrohugger'
-            implementationClass = 'com.zlad.gradle.avrohugger.AvrohuggerPlugin'
+            id = 'com.chudsaviet.gradle.avrohugger'
+            implementationClass = 'com.chudsaviet.gradle.avrohugger.AvrohuggerPlugin'
             displayName = 'Gradle avrohugger plugin'
             description = 'Plugin for generating scala case classes from apache avro schemas, datafiles and protocols.'
         }
@@ -34,8 +34,8 @@ gradlePlugin {
 }
 
 pluginBundle {
-    website = 'https://github.com/zladovan/gradle-avrohugger-plugin'
-    vcsUrl = 'https://github.com/zladovan/gradle-avrohugger-plugin.git'
+    website = 'https://github.com/chudsaviet/gradle-avrohugger-plugin'
+    vcsUrl = 'https://github.com/chudsaviet/gradle-avrohugger-plugin.git'
     tags = ['scala', 'avro']
 }
 

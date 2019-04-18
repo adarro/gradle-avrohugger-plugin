@@ -1,8 +1,8 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
-import com.zlad.gradle.avrohugger.common.Resources
-import com.zlad.gradle.avrohugger.common.TestProject
-import com.zlad.gradle.avrohugger.common.TestProjectConfig
+import com.chudsaviet.gradle.avrohugger.common.Resources
+import com.chudsaviet.gradle.avrohugger.common.TestProject
+import com.chudsaviet.gradle.avrohugger.common.TestProjectConfig
 import org.gradle.testkit.runner.BuildResult
 import org.junit.Rule
 import spock.lang.Specification

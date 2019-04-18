@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 import avrohugger.format.Scavro$
 import avrohugger.types.AvroScalaTypes
@@ -144,6 +144,32 @@ class CustomTypesSpec extends Specification implements CustomTypesValues {
 
         then:
         avroScalaTypes.protocol() == ScalaADT
+    }
+
+    def "should return modified date in avro scala types"() {
+        given:
+        final modified = new CustomTypes(
+                dateType: JavaTimeLocalDate
+        )
+
+        when:
+        final avroScalaTypes = modified.toAvroScalaTypes()
+
+        then:
+        avroScalaTypes.date() == JavaTimeLocalDate
+    }
+
+    def "should return modified timestampMillis in avro scala types"() {
+        given:
+        final modified = new CustomTypes(
+                timestampMillisType: JavaTimeInstant
+        )
+
+        when:
+        final avroScalaTypes = modified.toAvroScalaTypes()
+
+        then:
+        avroScalaTypes.timestampMillis() == JavaTimeInstant
     }
     
 }

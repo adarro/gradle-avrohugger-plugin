@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 import avrohugger.Generator
 import avrohugger.types.AvroScalaTypes

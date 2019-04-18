@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 import org.gradle.api.Action
 import org.gradle.api.Project

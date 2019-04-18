@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

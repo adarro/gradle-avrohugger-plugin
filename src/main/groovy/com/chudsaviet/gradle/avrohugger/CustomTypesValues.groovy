@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 import avrohugger.types.EnumAsScalaString$
 import avrohugger.types.JavaEnum$
@@ -25,6 +25,11 @@ import avrohugger.types.ScalaNull$
 import avrohugger.types.ScalaSeq$
 import avrohugger.types.ScalaString$
 import avrohugger.types.ScalaVector$
+import avrohugger.types.JavaSqlDate$
+import avrohugger.types.JavaTimeLocalDate$
+import avrohugger.types.JavaSqlTimestamp$
+import avrohugger.types.JavaTimeInstant$
+
 
 /**
  * Constants for original avrohugger scala type objects to provide nice names in DSL.
@@ -79,4 +84,12 @@ interface CustomTypesValues {
     // protocol
     ScalaADT$ ScalaADT = ScalaADT$.MODULE$
     NoTypeGenerated$ NoTypeGenerated = NoTypeGenerated$.MODULE$
+
+    // date
+    JavaSqlDate$ JavaSqlDate = JavaSqlDate$.MODULE$
+    JavaTimeLocalDate$ JavaTimeLocalDate = JavaTimeLocalDate$.MODULE$
+
+    // timestampMillis
+    JavaSqlTimestamp$ JavaSqlTimestamp = JavaSqlTimestamp$.MODULE$
+    JavaTimeInstant$ JavaTimeInstant = JavaTimeInstant$.MODULE$
 }

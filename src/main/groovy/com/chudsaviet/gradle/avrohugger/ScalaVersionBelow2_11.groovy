@@ -1,6 +1,6 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
-import groovy.transform.InheritConstructors
+
 import org.gradle.api.Project
 import org.gradle.api.artifacts.Dependency
 import org.gradle.util.VersionNumber

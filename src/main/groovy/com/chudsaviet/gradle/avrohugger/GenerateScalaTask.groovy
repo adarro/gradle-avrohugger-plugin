@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 import avrohugger.types.AvroScalaTypes
 import org.gradle.api.file.DirectoryProperty

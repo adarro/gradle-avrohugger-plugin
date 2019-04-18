@@ -1,8 +1,7 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
-import com.zlad.gradle.avrohugger.common.Resources
-import com.zlad.gradle.avrohugger.common.TestProject
-import com.zlad.gradle.avrohugger.common.TestProjectConfig
+
+import com.chudsaviet.gradle.avrohugger.common.TestProjectConfig
 import org.gradle.testkit.runner.BuildResult
 import org.junit.Rule
 import spock.lang.Specification
@@ -12,15 +11,15 @@ import static org.gradle.testkit.runner.TaskOutcome.SUCCESS
 class AvrohuggerPluginBuildFunctionalSpec extends Specification {
 
     @Rule
-    TestProject project = new TestProject(new TestProjectConfig(
-        buildDefinition: Resources.read('sample.gradle').text,
+    com.chudsaviet.gradle.avrohugger.common.TestProject project = new com.chudsaviet.gradle.avrohugger.common.TestProject(new TestProjectConfig(
+        buildDefinition: com.chudsaviet.gradle.avrohugger.common.Resources.read('sample.gradle').text,
         inputDirectories:['src-avro'],
         outputDirectories: ['src-scala']
     ))
 
     def "should generate and compile scala classes during build with custom config"() {
         given:
-        project.inputFile('input.avsc') << Resources.read('sample.avsc')
+        project.inputFile('input.avsc') << com.chudsaviet.gradle.avrohugger.common.Resources.read('sample.avsc')
 
         when:
         final result = project.build()
@@ -38,6 +37,6 @@ class AvrohuggerPluginBuildFunctionalSpec extends Specification {
     }
 
     private File compiledScalaClass() {
-        project.projectFile('build', 'classes', 'scala', 'main', 'com', 'zlad', 'FullName.class')
+        project.projectFile('build', 'classes', 'scala', 'main', 'com', 'chudsaviet', 'FullName.class')
     }
 }

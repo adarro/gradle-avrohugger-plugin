@@ -1,3 +1,3 @@
 plugins {
-    id 'com.zlad.gradle.avrohugger'
+    id 'com.chudsaviet.gradle.avrohugger'
 }

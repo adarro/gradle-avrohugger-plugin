@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger
+package com.chudsaviet.gradle.avrohugger
 
 /**
  * Constants providing nice names of source formats in DSL without need to do import.

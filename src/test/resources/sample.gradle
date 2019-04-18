@@ -1,6 +1,6 @@
 plugins {
     id 'scala'
-    id 'com.zlad.gradle.avrohugger'
+    id 'com.chudsaviet.gradle.avrohugger'
 }
 
 repositories {
@@ -14,7 +14,7 @@ dependencies {
 avrohugger {
     sourceDirectories = files('src-avro')
     destinationDirectory = file('src-scala')
-    namespaceMapping = [ 'com.example' : 'com.zlad' ]
+    namespaceMapping = [ 'com.example' : 'com.chudsaviet' ]
     typeMapping {
         protocolType = ScalaADT
     }

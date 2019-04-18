@@ -1,4 +1,4 @@
-package com.zlad.gradle.avrohugger.common
+package com.chudsaviet.gradle.avrohugger.common
 
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner

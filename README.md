@@ -1,7 +1,7 @@
 # gradle-avrohugger-plugin
 
-[![Build Status](https://travis-ci.org/zladovan/gradle-avrohugger-plugin.svg?branch=master)](https://travis-ci.org/zladovan/gradle-avrohugger-plugin)
-[![Build Status](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/com/zlad/gradle/avrohugger/com.zlad.gradle.avrohugger.gradle.plugin/maven-metadata.xml.svg?label=gradle%20plugin%20portal)](https://plugins.gradle.org/plugin/com.zlad.gradle.avrohugger)
+[![Build Status](https://travis-ci.org/chudsaviet/gradle-avrohugger-plugin.svg?branch=master)](https://travis-ci.org/chudsaviet/gradle-avrohugger-plugin)
+[![Build Status](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/com/chudsaviet/gradle/avrohugger/com.chudsaviet.gradle.avrohugger.gradle.plugin/maven-metadata.xml.svg?label=gradle%20plugin%20portal)](https://plugins.gradle.org/plugin/com.chudsaviet.gradle.avrohugger)
 
 
 [Gradle](https://gradle.org) plugin for generating scala case classes from [Apache Avro](https://avro.apache.org/) schemas, datafiles and protocols. 
@@ -17,7 +17,7 @@ For minimal usecase it is enough to add following to your `build.gradle` file:
                                     
 ```groovy
 plugins {
-    id 'com.zlad.gradle.avrohugger' version '0.2.3'
+    id 'com.chudsaviet.gradle.avrohugger' version '0.2.4'
 }
 ```
 
@@ -27,7 +27,7 @@ to enable compilation of generated scala sources:
 ```groovy
 plugins {
     id 'scala'
-    id 'com.zlad.gradle.avrohugger' version '0.2.3'
+    id 'com.chudsaviet.gradle.avrohugger' version '0.2.4'
 }
 
 repositories {
@@ -53,7 +53,7 @@ You can change default configuration in `avrohugger` block like in following exa
 avrohugger {
     sourceDirectories = files('src-avro')
     destinationDirectory = file('src-scala')
-    namespaceMapping = [ 'com.example' : 'com.zlad' ]
+    namespaceMapping = [ 'com.example' : 'com.chudsaviet' ]
     typeMapping {
         protocolType = ScalaADT
     }
@@ -83,6 +83,8 @@ avrohugger {
 | unionType                  | OptionEitherShapelessCoproduct                 | OptionEitherShapelessCoproduct, OptionalShapelessCoproduct, OptionShapelessCoproduct |   
 | arrayType                  | ScalaSeq (ScalaArray for Scavro)               | ScalaSeq, ScalaArray, ScalaList, ScalaVector |   
 | protocolType               | NoTypeGenerated                                | NoTypeGenerated, ScalaADT |
+| dateType                   | JavaTimeLocalDate                              | JavaTimeLocalDate, JavaSqlDate |
+| timestampMillisType        | JavaTimeInstant                                | JavaTimeInstant, JavaSqlTimestamp |
 
 > See [avrohugger](https://github.com/julianpeeters/avrohugger/blob/master/README.md#supports-generating-case-classes-with-arbitrary-fields-of-the-following-datatypes) library for all details about types
 
@@ -120,7 +122,7 @@ avrohugger {
     plugins {
         id 'scala'
         id 'com.commercehub.gradle.plugin.avro' version '0.9.1'
-        id 'com.zlad.gradle.avrohugger' version '0.2.3'
+        id 'com.chudsaviet.gradle.avrohugger' version '0.2.4'
     }
     
     repositories {
